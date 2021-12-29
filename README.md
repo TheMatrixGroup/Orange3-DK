@@ -14,6 +14,42 @@ Installation
 
 ```Orange3-DK```
 
+### Step 1
+
+Go to the menu `Options` - `Add-ons`.
+
+![](doc/setup/setup_01.png)
+
+### Step 2
+
+Click `Add more...` button.
+
+![](doc/setup/setup_02.png)
+
+### Step 3
+
+Type `Orange3-DK` and click `Add` button.
+
+![](doc/setup/setup_03.png)
+
+### Step 4
+
+Check `DK` box and click `OK` to install the add-on.
+
+![](doc/setup/setup_04.png)
+
+### Step 5
+
+Restart Orange3.
+
+![](doc/setup/setup_05.png)
+
+### Step 6
+
+Enjoy!
+
+![](doc/setup/setup_06.png)
+
 Development
 ------------
 
