@@ -7,17 +7,16 @@ from setuptools import setup, find_packages
 
 NAME = "Orange3-DK"
 
-VERSION = "0.0.1"
+VERSION = "0.0.2"
 
 AUTHOR = 'The Matrix'
 AUTHOR_EMAIL = 'matrix.ai.solution@gmail.com'
 
 URL = 'https://dk.m47rix.com'
 DESCRIPTION = "Add-on containing Orange3 DynamiKontrol widgets"
-LONG_DESCRIPTION = open(path.join(path.dirname(__file__), 'README.pypi'),
-                        'r', encoding='utf-8').read()
+LONG_DESCRIPTION = open('README.pypi', 'r', encoding='utf-8').read()
 
-LICENSE = "BSD"
+LICENSE = "MIT"
 
 KEYWORDS = (
     # [PyPi](https://pypi.python.org) packages with keyword "orange3 add-on"
