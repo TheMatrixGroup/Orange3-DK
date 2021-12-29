@@ -1,11 +1,15 @@
-Orange3 Explain
-===============
+Orange3 DynamiKontrol Add-on
+======================
 
-Short description for the PyPI.
-See [documentation](http://orange3-imageanalytics.readthedocs.org/).
+Control DynamiKontrol motor modules on Orange3.
 
-Features
---------
-#### List of key features
-* Feature 1
-* Feature 2
+https://dk.m47rix.com
+
+| DK Angle | DK Speed |
+| --- | --- |
+| <img src="https://dk.m47rix.com/static/assets/img/dynamikontrol/angle_07.png" width="400px"> | <img src="https://dk.m47rix.com/static/assets/img/dynamikontrol/speed_01.png" width="400px"> |
+
+Installation
+------------
+
+```Orange3-DK```
