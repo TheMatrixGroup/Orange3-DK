@@ -1,7 +1,7 @@
 import unittest
 from Orange.widgets.tests.base import WidgetTest
 
-from orangecontrib.example.widgets.mywidget import MyWidget
+from orangecontrib.dynamikontrol.widgets.motor import Motor
 
 
 class ExampleTests(unittest.TestCase):
@@ -11,7 +11,7 @@ class ExampleTests(unittest.TestCase):
 
 class TestMyWidget(WidgetTest):
     def setUp(self):
-        self.widget = self.create_widget(MyWidget)
+        self.widget = self.create_widget(Motor)
 
     def test_addition(self):
         self.assertEqual(1 + 1, 2)

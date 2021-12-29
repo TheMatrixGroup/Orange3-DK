@@ -58,7 +58,7 @@ Widgets
 .. toctree::
    :maxdepth: 1
 
-   widgets/mywidget
+   widgets/motor
 
 Indices and tables
 ==================

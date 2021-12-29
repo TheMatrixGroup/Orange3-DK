@@ -1,16 +1,21 @@
-Orange3 Example Add-on
+Orange3 DynamiKontrol Add-on
 ======================
 
-This is an example add-on for [Orange3](http://orange.biolab.si). Add-on can extend Orange either 
-in scripting or GUI part, or in both. We here focus on the GUI part and implement a simple (empty) widget,
-register it with Orange and add a new workflow with this widget to example tutorials.
+Control DynamiKontrol motor modules on Orange3.
+
+https://dk.m47rix.com
+
+| DK Angle | DK Speed |
+| --- | --- |
+| <img src="https://dk.m47rix.com/static/assets/img/dynamikontrol/angle_07.png" width="400px"> | <img src="https://dk.m47rix.com/static/assets/img/dynamikontrol/speed_01.png" width="400px"> |
 
 Installation
 ------------
 
-To install the add-on from source run
+```Orange3-DK```
 
-    pip install .
+Development
+------------
 
 To register this add-on with Orange, but keep the code in the development directory (do not copy it to 
 Python's site-packages directory), run
@@ -34,7 +39,3 @@ use
 or
 
     python -m Orange.canvas
-
-The new widget appears in the toolbox bar under the section Example.
-
-![screenshot](https://github.com/biolab/orange3-example-addon/blob/master/screenshot.png)
