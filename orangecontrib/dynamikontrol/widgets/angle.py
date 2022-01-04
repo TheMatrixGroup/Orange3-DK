@@ -1,5 +1,6 @@
 from AnyQt.QtWidgets import QLabel
 from Orange.widgets.widget import OWWidget
+from Orange.data import Table
 from orangewidget.widget import OWBaseWidget, Output, Input
 from orangewidget.settings import Setting
 from orangewidget import gui
@@ -31,7 +32,7 @@ class Angle(OWWidget):
 
     class Inputs:
         module = Input('Module', object, auto_summary=False)
-        angle = Input('Angle', int, auto_summary=False)
+        angle = Input('Angle', object, auto_summary=False)
 
     class Outputs:
         module = Output('Module', object, auto_summary=False)
@@ -57,8 +58,11 @@ class Angle(OWWidget):
         self.commit()
 
     @Inputs.angle
-    def set_angle(self, angle):
-        self.angle = angle
+    def set_angle(self, data):
+        if type(data) == Table:
+            self.angle = data[0][0]
+        elif type(data) in [int, float]:
+            self.angle = int(data)
 
         self.commit()
 
