@@ -1,7 +1,5 @@
-from AnyQt.QtWidgets import QLabel
 from Orange.widgets.widget import OWWidget
-from orangewidget.widget import OWBaseWidget, Output
-from orangewidget.settings import Setting
+from orangewidget.widget import Output
 from orangewidget import gui
 from dynamikontrol import Module
 
@@ -18,9 +16,6 @@ class Motor(OWWidget):
         super().__init__()
 
         self.optionsBox = gui.widgetBox(self.controlArea, 'Controller')
-
-        # label = QLabel('Hello, Motor!')
-        # self.optionsBox.layout().addWidget(label)
 
         gui.button(self.optionsBox, self, 'Run', callback=self.run)
         gui.button(self.optionsBox, self, 'Reset', callback=self.reset)

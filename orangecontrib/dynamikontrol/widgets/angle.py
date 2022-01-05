@@ -1,10 +1,7 @@
-from AnyQt.QtWidgets import QLabel
 from Orange.widgets.widget import OWWidget
 from Orange.data import Table
-from orangewidget.widget import OWBaseWidget, Output, Input
-from orangewidget.settings import Setting
+from orangewidget.widget import Output, Input
 from orangewidget import gui
-from dynamikontrol import Module
 import time
 
 
@@ -15,8 +12,9 @@ class Angle(OWWidget):
     want_main_area = False
 
     module = None
-    angle = Setting(0)
-    period = Setting(0)
+    angle = 0
+    period = 1.0
+    multiplyer = 1.0
 
     def __init__(self):
         super().__init__()
@@ -27,6 +25,8 @@ class Angle(OWWidget):
             callback=self.commit)
         gui.doubleSpin(self.optionsBox, self, 'period',
             minv=0, maxv=5, step=0.1, label='Period (0.0 ~ 5.0 seconds)')
+        gui.doubleSpin(self.optionsBox, self, 'multiplyer',
+            minv=0, maxv=100, step=0.1, label='Angle multiplyer')
 
         self.Outputs.module.send(self.module)
 
@@ -45,7 +45,7 @@ class Angle(OWWidget):
         if period < 0.1:
             period = None
 
-        self.module.motor.angle(int(self.angle), period=period)
+        self.module.motor.angle(int(self.angle * self.multiplyer), period=period)
         if period is not None:
             time.sleep(period)
 
