@@ -11,7 +11,7 @@ import time
 class Angle(OWWidget):
     name = 'Angle'
     icon = 'icons/angle.png'
-    description = '''Control the motor by angle by degree. 모터를 각도로 제어합니다 (단위: 도).'''
+    description = '''Control the motor by angle by degree. If the input is DataTable, use the value of first row and first column by control angle. 모터를 각도로 제어합니다 (단위: 도). 입력값이 데이터테이블이면 테이블의 1행 1열의 값을 각도로 사용합니다.'''
     want_main_area = False
 
     module = None
@@ -60,9 +60,14 @@ class Angle(OWWidget):
     @Inputs.angle
     def set_angle(self, data):
         if type(data) == Table:
-            self.angle = data[0][0]
+            if len(data) == 0 or len(data[0]) == 0:
+                return
+
+            self.angle = int(data[0][0].value)
         elif type(data) in [int, float]:
             self.angle = int(data)
+        else:
+            return
 
         self.commit()
 
