@@ -46,7 +46,8 @@ class Angle(OWWidget):
             period = None
 
         self.module.motor.angle(int(self.angle), period=period)
-        time.sleep(self.period)
+        if period is not None:
+            time.sleep(period)
 
         self.Outputs.module.send(self.module)
 
