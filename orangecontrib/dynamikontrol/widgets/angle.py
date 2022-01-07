@@ -26,7 +26,7 @@ class Angle(OWWidget):
         gui.doubleSpin(self.optionsBox, self, 'period',
             minv=0, maxv=5, step=0.1, label='Period (0.0 ~ 5.0 seconds)')
         gui.doubleSpin(self.optionsBox, self, 'multiplyer',
-            minv=0, maxv=100, step=0.1, label='Angle multiplyer')
+            minv=-100, maxv=100, step=0.1, label='Angle multiplyer')
 
         self.Outputs.module.send(self.module)
 
