@@ -15,9 +15,9 @@ from Orange.data import Table, Domain, StringVariable, ContinuousVariable
 from Orange.widgets import gui, widget, settings
 
 
-face_cascade_classifier = cv2.CascadeClassifier(
-    os.path.join(os.path.dirname(os.path.abspath(__file__)), 'data',
-                 'haarcascade_frontalface_default.xml'))
+# face_cascade_classifier = cv2.CascadeClassifier(
+#     os.path.join(os.path.dirname(os.path.abspath(__file__)), 'data',
+#                  'haarcascade_frontalface_default.xml'))
 
 
 class OWNWebcamCapture(widget.OWWidget):
@@ -27,11 +27,11 @@ class OWNWebcamCapture(widget.OWWidget):
 
     class Output:
         SNAPSHOT = 'Snapshot'
-        SNAPSHOT_ASPECT = 'Snapshot (1:1)'
+        # SNAPSHOT_ASPECT = 'Snapshot (1:1)'
 
     outputs = [
         (Output.SNAPSHOT, Table),
-        (Output.SNAPSHOT_ASPECT, Table),
+        # (Output.SNAPSHOT_ASPECT, Table),
     ]
 
     want_main_area = False
@@ -163,7 +163,8 @@ class OWNWebcamCapture(widget.OWWidget):
 
         for image, suffix, output in (
                 (frame, '', self.Output.SNAPSHOT),
-                (self.clip_aspect_frame(frame), '_aspect', self.Output.SNAPSHOT_ASPECT)):
+                # (self.clip_aspect_frame(frame), '_aspect', self.Output.SNAPSHOT_ASPECT)
+        ):
             path = os.path.join(
                 self.IMAGE_DIR, '{normed_name}_{timestamp}{suffix}.png'.format(**locals()))
             cv2.imwrite(path,
