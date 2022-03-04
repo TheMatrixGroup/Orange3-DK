@@ -7,7 +7,7 @@ from setuptools import setup, find_packages
 
 NAME = "Orange3-DK"
 
-VERSION = "0.4.0"
+VERSION = "0.4.1"
 
 AUTHOR = 'The Matrix'
 AUTHOR_EMAIL = 'contact@m47rix.com'
