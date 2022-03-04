@@ -7,10 +7,10 @@ from setuptools import setup, find_packages
 
 NAME = "Orange3-DK"
 
-VERSION = "0.3.0"
+VERSION = "0.4.0"
 
 AUTHOR = 'The Matrix'
-AUTHOR_EMAIL = 'matrix.ai.solution@gmail.com'
+AUTHOR_EMAIL = 'contact@m47rix.com'
 
 URL = 'https://dk.m47rix.com'
 DESCRIPTION = "Add-on containing Orange3 DynamiKontrol widgets"
@@ -36,7 +36,8 @@ DATA_FILES = [
 
 INSTALL_REQUIRES = [
     'Orange3',
-    'DynamiKontrol'
+    'DynamiKontrol',
+    'opencv-python'
 ]
 
 ENTRY_POINTS = {
